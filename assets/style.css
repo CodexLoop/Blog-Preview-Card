@@ -1,0 +1,136 @@
+@font-face {
+    font-family: 'MyCustomFont';
+    src: url('fonts/Figtree-VariableFont_wght.ttf') format('truetype');
+    font-weight: 100 900; /*Define the range for variable fonts */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MyCustomFont';
+    src: url('fonts/Figtree-Italic-VariableFont_wght.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: italic;
+}
+
+
+/*Global Variables*/
+:root{
+    /*Colors*/
+    --Yellow: hsl(47, 88%, 63%);
+    --White: hsl(0, 0%, 100%);
+    --Gray: hsl(0, 0%, 42%);
+    --Gray-dark: hsl(0, 0%, 7%);
+
+    /*Typography*/
+    --body-copy: 16px;
+
+    /*Weights*/
+    --regular: 500;
+    --semi-bold: 600;
+    --bold: 700;
+    --black: 800;
+}
+
+
+/* Global Effects */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: "MyCustomFont", sans-serif;
+    font-size: var(--body-copy);
+    font-weight: var(--regular);
+    color: var(--Gray-dark);
+    background: var(--Yellow);
+}
+
+.container{
+    width: 80%;
+    overflow: hidden;
+}
+
+
+/* MAIN SECTION */
+
+
+/* CARD SECTION */
+.card__container{
+    height: 100dvh;
+    margin: auto;
+    display: flex;
+}
+
+.card__section{
+    display: grid;
+    grid-template-columns: 336px;
+    width: fit-content;
+    padding: 1.75rem;
+    box-shadow: var(--Gray-dark) 6px 6px 0;
+    background-color: var(--White);
+    border-radius: 1rem;
+    border: 1px solid var(--Gray-dark);
+    margin: auto;
+}
+
+.card__image img{
+    border-radius: .8rem;
+}
+
+.highlight{
+    padding: .5rem 1rem .5rem 1rem;
+    margin-block: 1rem .75rem;
+    background-color: var(--Yellow);
+    font-weight: var(--black);
+    width: fit-content;
+    border-radius: .4rem;
+}
+
+.publish__date{
+    margin-block: 0 1rem;
+}
+
+.card__title h1{
+    font-weight: var(--black);
+    font-size: 24px;
+    margin-block: .25rem 1rem;
+}
+
+.card__description{
+    color: var(--Gray);
+    font-weight: var(regular);
+    margin-block: 0 1rem;
+}
+
+.card__user{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-block: .5rem 0;
+}
+
+.user__image img{
+    width: 32px;
+}
+
+.user__name{
+    font-weight: var(--black);
+}
+
+/* @media screen and (max-width: 400px)
+{
+    .card__section{
+        grid-template-columns: 280px;    
+        width: 300px;
+    } 
+
+    .card__image{
+        width: 280px;
+    }
+} */
