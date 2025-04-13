@@ -122,15 +122,3 @@ body{
 .user__name{
     font-weight: var(--black);
 }
-
-/* @media screen and (max-width: 400px)
-{
-    .card__section{
-        grid-template-columns: 280px;    
-        width: 300px;
-    } 
-
-    .card__image{
-        width: 280px;
-    }
-} */
